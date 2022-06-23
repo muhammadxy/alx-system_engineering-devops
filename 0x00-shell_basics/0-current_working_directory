@@ -1,6 +1,2 @@
 #!/bin/bash
 echo $(readlink -f $0)
-
-
-
-

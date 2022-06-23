@@ -1,3 +1,2 @@
 #!/bin/bash
-VAR=$1
-ls -l $VAR
+ls 

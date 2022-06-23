@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(readlink -f $0)
+echo $(realpath $0)

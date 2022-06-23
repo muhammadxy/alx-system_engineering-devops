@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod +x 5-execute
+chmod +u 5-execute

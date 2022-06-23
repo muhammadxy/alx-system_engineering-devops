@@ -1,2 +1,3 @@
 #!/bin/bash
-echo ls $(realpath $0)
+VAR=$1
+ls -l $VAR

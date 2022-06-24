@@ -1,0 +1,2 @@
+#!/bin/bash
+chmod 774 12-directory_permissions

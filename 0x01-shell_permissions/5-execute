@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 764 5-execute
+chmod 774 5-execute

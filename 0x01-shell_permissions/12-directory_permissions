@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 744 12-directory_permissions
+mkdir my_dir chmod 751 my_dir

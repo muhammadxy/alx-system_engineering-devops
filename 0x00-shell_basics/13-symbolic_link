@@ -1,2 +1,2 @@
 #!/bin/bash
-ln -s 13-symbolic_ink /bin/ls
+ln -s /bin/ls __ls__

@@ -1,0 +1,2 @@
+#!/bin/bash
+grep -E '[a-z]{18}' /etc/ssh/sshd_config

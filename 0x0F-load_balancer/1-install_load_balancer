@@ -7,6 +7,6 @@ sudo apt-get -y install haproxy=1.6.\*
 sudo echo -e "\nlisten www" >> /etc/haproxy/haproxy.cfg
 sudo echo -e "\tbind :80" >> /etc/haproxy/haproxy.cfg
 sudo echo -e "\tbalance roundrobin" >> /etc/haproxy/haproxy.cfg
-sudo echo -e "\tserver gc-499-web-01-1553637534 34.73.5.42" >> /etc/haproxy/haproxy.cfg
-sudo echo -e "\tserver gc-499-web-02-1554448076 34.73.70.108" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tserver gc-94222-web-01-1553637534 100.25.192.24" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tserver gc-94222-web-02-1554448076 18.235.249.137" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart

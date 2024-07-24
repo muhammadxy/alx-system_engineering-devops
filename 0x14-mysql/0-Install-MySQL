@@ -1,0 +1,8 @@
+##this is a demo testing
+sudo apt-get update
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.15-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
+sudo apt-get update
+sudo apt-get install mysql-server=5.7.*
+sudo mysql_secure_installation
+mysql --version

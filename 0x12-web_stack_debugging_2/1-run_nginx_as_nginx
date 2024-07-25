@@ -1,7 +1,29 @@
 #!/usr/bin/env bash
-# This script runs nginx as nginx user.
+# This script configures nginx to run as the nginx user and listen on port 8080
+
+# Check if the script is run as root
+if [ "$(whoami)" != "root" ]; then
+    echo "This script must be run as root."
+    exit 1
+fi
+
+# Set correct permissions for the nginx configuration file
 chmod 644 /etc/nginx/nginx.conf
+
+# Update the default site configuration to listen on port 8080
 sed -i -e 's#listen 80#listen 8080#' -e 's#listen \[::\]:80#listen \[::\]:8080#' /etc/nginx/sites-available/default
+
+# Update the main nginx configuration to run as the nginx user
 sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
-pkill -9 apache
+
+# Ensure the necessary directories have the correct permissions
+chown -R nginx:nginx /var/log/nginx /var/cache/nginx /var/run
+
+# Restart the nginx service
 sudo -u nginx service nginx restart
+
+# Verify Nginx is running as the nginx user and listening on port 8080
+ps aux | grep nginx
+netstat -tulnp | grep nginx
+
+echo "Nginx has been configured to run as the nginx user and listen on port 8080."

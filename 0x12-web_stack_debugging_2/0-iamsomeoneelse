@@ -9,5 +9,5 @@ fi
 # Get the username from the argument
 USERNAME=$1
 
-# Run the whoami command as the specified user
+# Switch to the specified user and run whoami
 su -c "whoami" $USERNAME

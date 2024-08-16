@@ -32,12 +32,3 @@ def count_words(subreddit, word_list, after=None, count=Counter()):
         for word, freq in sorted_count:
             if freq > 0:
                 print(f"{word}: {freq}")
-
-if __name__ == '__main__':
-    if len(sys.argv) < 3:
-        print("Usage: {} <subreddit> <list of keywords>".format(sys.argv[0]))
-        print("Ex: {} programming 'python java javascript'".format(sys.argv[0]))
-    else:
-        subreddit = sys.argv[1]
-        word_list = [x for x in sys.argv[2].split()]
-        count_words(subreddit, word_list)
